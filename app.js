@@ -409,28 +409,105 @@ console.log(classmates);
 //11 **Create a new variable called withSyed and set it equal to the people array concatenated with the string of "Bob".
 //12 **Create a function called getdonuts() that will display all the donuts in your array and display on your page.
 
-// const donuts=["jelly", "chocolate", "glazed", "rainbow sprinkles", "maple bacon", "plain", "strawberry frosted"]
+//1// const donuts=["jelly", "chocolate", "glazed", "rainbow sprinkles", "maple bacon", "plain", "strawberry frosted"]
 // for(i=0; i<donuts.length; i++){
 //     console.log(donuts[i]);
 // }
-
-// donuts.shift();
-// donuts.pop();
-// donuts.unshift("lime zest");
-// donuts.push("lemon pie")
-// donuts.splice(2, 2, "bearclaw");
-// let text=donuts.toString();
 const donuts=["jelly", "chocolate", "glazed", "rainbow sprinkles", "maple bacon", "plain", "strawberry frosted"]
-// console.log(donuts.slice(2));
-// console.log(donuts.indexOf("glazed"));
-// console.log(donuts.indexOf("chocolate"));
+//2// donuts.shift();
+//3// donuts.pop();
+//4// donuts.unshift("lime zest");
+//5// donuts.push("lemon pie")
+//6// let text=donuts.toString();
+//7// console.log(donuts.slice(2));
+//8// console.log(donuts.indexOf("chocolate"));
+//9// console.log(donuts.indexOf("glazed"));
+//10// donuts.splice(2, 2, "bearclaw");
+//11// let withSyed = donuts.concat("bob");
+//11// console.log(withSyed);
 
-function getDonuts(){
-    const donuts=["jelly", "chocolate", "glazed", "rainbow sprinkles", "maple bacon", "plain", "strawberry frosted"]
-    document.getElementById("btn").innerHTML = donuts
+//12// function getDonuts(){
+//     const donuts=["jelly", "chocolate", "glazed", "rainbow sprinkles", "maple bacon", "plain", "strawberry frosted"]
+//     document.getElementById("btn").innerHTML = donuts
+// }
+
+
+
+// Your top choices
+// Create an array to hold your top choices (colors, presidents, whatever).
+// For each choice, log to the screen a string like: “My #1 choice is blue.”
+// Bonus: Change it to log “My 1st choice, “My 2nd choice”, “My 3rd choice”, picking the right suffix for the number based on what it is.
+var choices = ['red', 'orange', 'pink', 'yellow'];
+for (var i = 0; i < choices.length; i++) {
+    console.log('My #' + (i + 1) + ' choice is ' + choices[i]);
+}
+for (var i = 0; i < choices.length; i++) {
+    var choiceNum = i + 1;
+    var choiceNumSuffix;
+    if (choiceNum == 1) {
+        choiceNumSuffix = 'st';
+    } else if (choiceNum == 2) {
+        choiceNumSuffix = 'nd';
+    } else if (choiceNum == 3) {
+        choiceNumSuffix = 'rd';
+    } else {
+        choiceNumSuffix = 'th';
+    }
+    console.log('My ' + choiceNum + choiceNumSuffix + ' choice is ' + choices[i]);
 }
 
 
+//objects-data type that let us store collection of properties and methods
+// var objectName = {
+//     propertyName: propertyValue,
+//     propertyName: propertyValue,
+// };
+
+//object literal
+var sibling={
+    name: "Meghan",
+    age: 38,
+    single: false,
+    children: ["Lester", "Lulu"],
+    order: "older",
+};
+
+//new keyword setting values
+// var sibling = new Object();
+// sibling.name="Meghan";
+// sibling.age=38;
+// sibling.single=false;
+// sibling.children=["Lester", "Lulu"];
+// sibling.order="older";
+
+sibling.gender= "female";
+sibling.single=true;
+delete sibling.age;
+var meeting= (`Hello i am ${sibling["name"]} I am ${sibling["age"]} Am I Single? ${sibling["single"]} I am a ${sibling["gender"]}`);
+console.log(meeting);
 
 
+// The Recipe Card
+// Never forget another recipe!
+// Create an object to hold information on your favorite recipe. It should have properties for title (a string), servings (a number), and ingredients (an array of strings).
+// On separate lines (one console.log statement for each), log the recipe information so it looks like:
+// Mole
+// Serves: 2
+// Ingredients:
+// cinnamon
+// cumin
+// cocoa
 
+var recipe= {
+    title: "mole",
+    servings: 2,
+    ingredients:["cinnamon", "cumin", "cocoa"],
+
+};
+console.log(`${recipe.title}`);
+console.log(`Serves: ${recipe.servings}`);
+console.log(`Ingredients: ${recipe.ingredients}`);
+
+for(var i=0; i<recipe.ingredients.length; i++){
+    console.log(`${recipe.ingredients[i]}`);
+};
