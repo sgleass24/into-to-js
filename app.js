@@ -274,20 +274,20 @@ function calculateDeg(){
 }
 calculateDeg();
 
-document.write('Hello World'+'<br/>'); 
-document.write('Hello World'+'<br/>'); 
-document.write('Hello World'+'<br/>'); 
-document.write('Hello World'+'<br/>'); 
-document.write('Hello World'+'<br/>'); 
-document.write('Hello World'+'<br/>'); 
-document.write('Hello World'+'<br/>'); 
-document.write('Hello World'+'<br/>'); 
-document.write('Hello World'+'<br/>'); 
-document.write('Hello World'+'<br/>'); 
-// these are the same===
-for(let i = 0; i < 10; i++) { 
-    document.write('Hello World' +'<br/>' ); 
-   } 
+// document.write('Hello World'+'<br/>'); 
+// document.write('Hello World'+'<br/>'); 
+// document.write('Hello World'+'<br/>'); 
+// document.write('Hello World'+'<br/>'); 
+// document.write('Hello World'+'<br/>'); 
+// document.write('Hello World'+'<br/>'); 
+// document.write('Hello World'+'<br/>'); 
+// document.write('Hello World'+'<br/>'); 
+// document.write('Hello World'+'<br/>'); 
+// document.write('Hello World'+'<br/>'); 
+// // these are the same===
+// for(let i = 0; i < 10; i++) { 
+//     document.write('Hello World' +'<br/>' ); 
+//    } 
 
 
 
@@ -426,10 +426,11 @@ const donuts=["jelly", "chocolate", "glazed", "rainbow sprinkles", "maple bacon"
 //11// let withSyed = donuts.concat("bob");
 //11// console.log(withSyed);
 
-//12// function getDonuts(){
-//     const donuts=["jelly", "chocolate", "glazed", "rainbow sprinkles", "maple bacon", "plain", "strawberry frosted"]
-//     document.getElementById("btn").innerHTML = donuts
-// }
+//12
+function getDonuts(){
+    const donuts=["jelly", "chocolate", "glazed", "rainbow sprinkles", "maple bacon", "plain", "strawberry frosted"]
+    document.getElementById("btn").innerHTML = donuts
+}
 
 
 
@@ -511,3 +512,191 @@ console.log(`Ingredients: ${recipe.ingredients}`);
 for(var i=0; i<recipe.ingredients.length; i++){
     console.log(`${recipe.ingredients[i]}`);
 };
+
+// The Reading List
+// Keep track of which books you read and which books you want to read!
+// Create an array of objects, where each object describes a book and has properties for the 
+// title (a string), author (a string), and alreadyRead (a boolean indicating if you read it yet).
+// Iterate through the array of books. For each book, log the book title and book author like so:
+//  "The Hobbit by J.R.R. Tolkien".
+// Now use an if/else statement to change the output depending on whether you read it yet or not. 
+// If you read it, log a string like 'You already read "The Hobbit" by J.R.R. Tolkien', and if not, 
+// log a string like 'You still need to read "The Lord of the Rings" by J.R.R. Tolkien.'
+
+// var books={
+//     title: "Harry Potter and the Sorcerers Stone",
+//     author: "J.K. Rowling",
+//     alreadyRead: true,
+
+// };
+// {
+//     title: "The Handmaids Tale",
+//     author: "Margaret Atwood",
+//     areadyRead: false,
+// };
+// {
+//     title: "To Kill a Mockingbird",
+//     author: "Harper Lee",
+//     alreadyRead: true,
+// };
+// {
+//     title: "The Hobbit",
+//     author: "J.R. Tolkien",
+//     alreadyRead: false,
+// };
+
+// for (i=0; i<books.length; i++){
+//     var book= books [i];
+//     var bookInfo= book.title + ' by ' + book.author;
+//     if(book.alreadyRead){
+//         document.write(' You read ' + bookInfo);
+//     }
+//     else{
+//         document.write(' you still need to check out ' + bookInfo + '<br>');
+//     }
+// }
+
+
+
+var tommyBird= new Object();{
+  tommyBird.age=38;
+  tommyBird.color= 'white';
+  tommyBird.likes= ['food', 'sun'];
+  tommyBird.birthday= {"month": 7, "day": 17, year: 1983}
+}
+
+var mommyBird= new Object();{
+    mommyBird.age=30;
+    mommyBird.color="black";
+    mommyBird.likes=["food", "fun"];
+}
+function describeBird(bird) {
+    console.log("This bird is " + bird.age + " years old with " + bird.color + " feathers.");
+  }
+  
+  describeBird(tommyBird);
+  describeBird(mommyBird);
+  
+//constructor function
+function Movie(title, year, genre, cast){
+    this.title= title;
+    this.year= year;
+    this.genre= genre;
+    this.cast= [cast];
+}
+//method on the object//function in an object
+Movie.prototype.read= function(){
+    document.getElementById("movie1").innerHTML=
+    ("Title:" + " " + this.title +  '<br>' + 
+    "Year: " + this.year + "<br>" + 
+    "Genre:"  + this.genre + "<br>" +
+    "Actors: " + this.cast)
+
+    document.getElementById("movie2").innerHTML=
+    ("Title:" + " " + this.title +  '<br>' + 
+    "Year: " + this.year + "<br>" + 
+    "Genre:"  + this.genre + "<br>" +
+    "Actors: " + this.cast)
+
+    document.getElementById("movie3").innerHTML=
+    ("Title:" + " " + this.title +  '<br>' + 
+    "Year: " + this.year + "<br>" + 
+    "Genre:"  + this.genre + "<br>" +
+    "Actors: " + this.cast)
+}
+
+//initiate a new object
+var movie1=  new Movie("The Color Purple", 1982, " Drama", ["Whoopi Goldberg", " Oprah Winfrey"]);
+// var movie2= new Movie("Best in Show", 2000, "Comedy", ["Eugene Levy", "Catherine O'Hara", "Christopher Guest"]);
+// var movie3= new Movie("Tommy Boy", 1995, "Comedy", ["Chris Farley", "David Spade"]);
+movie1.read();
+
+//new constructor fav artist
+function Artist(name, genre, lastAlbum, song, bandMembers){
+    this.name=name;
+    this.genre=genre;
+    this.lastAlbum=lastAlbum;
+    this.song=song;
+    this.bandMembers=[bandMembers];
+
+
+}
+Artist.prototype.read= function(){
+    document.getElementById("phish").innerHTML=
+    ("Band Name:" + " " + this.name +  '<br>' + 
+    "They Play " + this.genre + " music" + "<br>" + 
+    "Their last album was"  + this.lastAlbum + "<br>" +
+    "My favorite song is " + this.song + "<br>" +
+    "The band members names are" + this.bandMembers);
+};
+var phish= new Artist("Phish", " Rock", " Sigma Oasis", "Frankenstein", [" trey", " mike", " page", " jon"]);
+phish.read();
+
+
+
+
+var caddy ={
+    make: "Cadillac",
+    model: "XT4",
+    year: 2020,
+    available: true,
+    description: "Newest XT lineup from Cadillac",
+}
+function display(){
+    var place =document.getElementById("submit");
+    
+   
+
+
+for (value in caddy){
+    place.innerHTML = "Make: " + caddy.make + '<br>' +
+    "Model: " + caddy.model + "<br>" +
+    "Year: " + caddy.year + "<br>" +
+    "About: " + caddy.description;
+
+}
+};
+
+// function clear1(){
+//     var place = document.getElementById("submit1").reset();
+    
+// };
+   
+
+// function toggleText(){
+//     var x = document.getElementById("Myid");
+//     if (x.style.display === "none") {
+//       x.style.display = "block";
+//     } else {
+//       x.style.display = "none";
+//     }
+//   }
+
+
+//create an array that stores 2 objects
+//current pet
+//past pet
+
+var twiggy={
+    name: "Twiggy",
+    age: "2 months",
+    type:"dog",
+    color:"brown and white",
+    alive:true,
+    friendly:true
+};
+
+var russell={
+    name:"Russell",
+    age:"14 years",
+    type:"dog",
+    color:"brown",
+    alive:false,
+    friendly:true
+};
+//set up a method to output my object
+function describePet(pet){
+    console.log(`This dog is ${pet.age} old. My pet is named ${pet.name}. Is she friendly? ${pet.friendly}`)
+}
+describePet(twiggy);
+describePet(russell);
