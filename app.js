@@ -657,10 +657,11 @@ for (value in caddy){
 }
 };
 
-// function clear1(){
-//     var place = document.getElementById("submit1").reset();
+function clear1(){
+    var close = "";
+    document.getElementById("submit").innerHTML = close;
     
-// };
+};
    
 
 // function toggleText(){
@@ -700,3 +701,5 @@ function describePet(pet){
 }
 describePet(twiggy);
 describePet(russell);
+
+
