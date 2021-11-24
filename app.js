@@ -662,6 +662,62 @@ function clear1(){
     document.getElementById("submit").innerHTML = close;
     
 };
+
+var shelby ={
+    make: "Shelby",
+    model: "GT500CR",
+    year: 1967,
+    available: true,
+    description: "The Shelby GT500CR carbon fiber concept car will be available for 25 people.",
+}
+function display2(){
+    var place =document.getElementById("submit2");
+    
+   
+
+
+for (value in shelby){
+    place.innerHTML = "Make: " + shelby.make + '<br>' +
+    "Model: " + shelby.model + "<br>" +
+    "Year: " + shelby.year + "<br>" +
+    "About: " + shelby.description;
+
+}
+};
+
+function clear2(){
+    var close = "";
+    document.getElementById("submit2").innerHTML = close;
+    
+};
+
+var bronco ={
+    make: "Ford",
+    model: "Bronco",
+    year: 2021,
+    available: true,
+    description: "A mashup of the original Bronco and latest Jeep Wrangler, with a dash of Land Rover Defender.",
+}
+function display3(){
+    var place =document.getElementById("submit3");
+    
+   
+
+
+for (value in shelby){
+    place.innerHTML = "Make: " + bronco.make + '<br>' +
+    "Model: " + bronco.model + "<br>" +
+    "Year: " + bronco.year + "<br>" +
+    "About: " + bronco.description;
+
+}
+};
+
+function clear3(){
+    var close = "";
+    document.getElementById("submit3").innerHTML = close;
+    
+};
    
 
 // function toggleText(){
