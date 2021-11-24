@@ -7,12 +7,14 @@
 // The totalCost variable should be set to pizzaCount variable * the cost of a pizza (you choose the cost)
 
 
-// var firstName="Shelby";
-// var pizzaCount="4";
-// var totalCost=4*12;
-// var isHungry="True";
+var firstName="Shelby";
+var pizzaCount="4";
+var totalCost=4*12;
+var isHungry="True";
 
-// // console.log("her name is" + " " + firstName + " " + "she ate" + " " + pizzaCount + " " + "pizzas, costing her $" + totalCost + " " +  firstName + " " + "was hungry:" + " " + isHungry);
+console.log("her name is" + " " + firstName + " " + 
+"she ate" + " " + pizzaCount + " " + "pizzas, costing her $" + 
+totalCost + " " +  firstName + " " + "was hungry:" + " " + isHungry);
 
 // alert("her name is" + " " + firstName);
 // alert("she ate" + " " + pizzaCount+ " " + "pizzas");
@@ -634,7 +636,7 @@ phish.read();
 
 
 
-
+//07-JS Objects
 var caddy ={
     make: "Cadillac",
     model: "XT4",
